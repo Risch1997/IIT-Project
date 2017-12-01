@@ -29,5 +29,5 @@
 				</tr>
 			</table>
 		</form>
-	</body>
-</html>
+		
+<?php include('includes/footer.php') ?>	

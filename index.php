@@ -5,7 +5,10 @@
 			$query = $dbcon->query("SELECT * FROM `users` WHERE userID = " . $_SESSION['userID']);
 			$user = $query->fetch(PDO::FETCH_ASSOC);
 			
-			echo "Welcome, " . $user['firstName'] . "! <a href=\"index.php?status=logout\">Logout</a>";
+			echo "
+			Welcome, " . $user['firstName'] . "! <a href=\"index.php?status=logout\">Logout</a><br/>
+			<a href=\"createGroup.php\">Create a new group</a><br/>
+			<a href=\"groupView\">View your groups</a>";
 		}
 		else {
 			echo "
@@ -13,5 +16,5 @@
 			<a href=\"register.php\">Need an account? Click here to register!</a>";
 		}
 		?>
-	</body>
-</html>
+		
+<?php include('includes/footer.php') ?>		
