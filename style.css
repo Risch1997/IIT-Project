@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	background-image: url("resources/images/background.png");
+	color: white;
+}
+.Name{
+	color: white;
+	font-size: 50px;
+	float: left;
+	clear: none;
+	display: block;
+}
+
+.Name a{
+	text-decoration: none;
+}
+.Name a:hover{
+	color: white;
+}
+
+#loginfield h1{
+	text-align: center;
+
+}
+
+#loginfield{
+	clear: both;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	width: 360px;
+	height: 215px;
+	margin: 0 auto;
+	padding: 0;
+
+}
+
+.login{
+	background: black;
+}
+
+.submit{
+	margin: 10px auto;
+	padding: 5px;
+	display: block;
+	color: white;
+	background-color: red;
+	border: 1px solid white;
+}
+
+.submit a{
+	text-decoration: none;
+}
+
+.submit a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+#user, #pswd, #email{
+	margin: 10px auto;
+	padding: 10px;
+	display: block;
+	width: 300px;
+}
+.SignUp{
+	float: right;
+	height:50px;
+	padding-top: 50px;
+	font-size: 20px;
+}
+#create{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	width: 360px;
+
+}
+a{
+	color: white;
+}
+a:hover{
+	color: red;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear: both;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navigation li a:hover {
+    background-color: #111;
+}
+
+#members{
+	float: right;
+	clear: both;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	width: 200px;
+
+}
