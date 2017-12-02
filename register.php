@@ -1,33 +1,29 @@
 <?php include('includes/top.php'); ?>
 
+	<div id="create">
 		<h1>Registration</h1>
 		<form name="registration" action="" method="POST">
 			<table id="registration">
 				<tr>
-					<td><label for="firstName">First Name</label></td>
-					<td><input type="text" name="firstName"></td>
+					<td><input type="text" name="firstName" placeholder="First Name"></td>
 				</tr>
 				<tr>
-					<td><label for="lastName">Last Name</label></td>
-					<td><input type="text" name="lastName"></td>
+					<td><input type="text" name="lastName" placeholder="Last Name"></td>
 				</tr>
 				<tr>
-					<td><label for="email">Email Address</label></td>
-					<td><input type="email" name="email"></td>
+					<td><input type="email" name="email" placeholder="Email Address"></td>
 				</tr>
 				<tr>
-					<td><label for="password">Password</label></td>
-					<td><input type="password" name="password"></td>
+					<td><input type="password" name="password" placeholder="Password"></td>
 				</tr>
 				<tr>
-					<td><label for="passwordc">Confirm Password</label></td>
-					<td><input type="password" name="passwordc"></td>
+					<td><input type="password" name="passwordc" placeholder="Confirm Password"></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td><input type="submit" name="registerSubmit" value="Register"></td>
+					<td><input type="submit" name="registerSubmit" value="Register" class="submit"></td>
 				</tr>
 			</table>
 		</form>
+	</div>
 	</body>
 </html>

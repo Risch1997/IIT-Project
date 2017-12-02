@@ -1,21 +1,20 @@
 <?php include('includes/top.php'); ?>
 
+<div id="loginfield">
 		<h1>Log In</h1>
 		<form name="login" action="" method="POST">
 			<table id="login">
 				<tr>
-					<td><label for="email">Email Address</label></td>
-					<td><input type="email" name="email"></td>
+					<td><input type="email" name="email" placeholder="Email"></td>
 				</tr>
 				<tr>
-					<td><label for="password">Password</label></td>
-					<td><input type="password" name="password"></td>
+					<td><input type="password" name="password" placeholder="Password"></td>
 				</tr>
 				<tr>
-					<td></td>
-					<td><input type="submit" name="loginSubmit" value="Register"></td>
+					<td><input type="submit" name="loginSubmit" value="Register" class="submit"></td>
 				</tr>
 			</table>
 		</form>
+	</div>
 	</body>
 </html>
