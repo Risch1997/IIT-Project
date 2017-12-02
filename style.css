@@ -4,11 +4,11 @@
 body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 100;
-	background-image: url("resources/images/background.png");
-	color: white;
+	background-image: url("resources/images/background3.png");
+	color: black;
 }
 .Name{
-	color: white;
+	color: black;
 	font-size: 50px;
 	float: left;
 	clear: none;
@@ -19,7 +19,7 @@ body{
 	text-decoration: none;
 }
 .Name a:hover{
-	color: white;
+	color: black;
 }
 
 #loginfield h1{
@@ -30,12 +30,13 @@ body{
 #loginfield{
 	clear: both;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	border-width: 1px;
 	width: 360px;
-	height: 215px;
+	height: 260px;
 	margin: 0 auto;
 	padding: 0;
+	background: white;
 
 }
 
@@ -47,9 +48,9 @@ body{
 	margin: 10px auto;
 	padding: 5px;
 	display: block;
-	color: white;
-	background-color: red;
-	border: 1px solid white;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
 }
 
 .submit a{
@@ -57,14 +58,15 @@ body{
 }
 
 .submit a:hover{
-	color: white;
+	color: black;
 	text-decoration: underline;
 }
 
-#user, #pswd, #email{
-	margin: 10px auto;
-	padding: 10px;
+input[type=text], input[type=email], input[type=password]{
+	margin: 8px auto;
+	padding: 12px;
 	display: block;
+	border: 1px solid black;
 	width: 300px;
 }
 .SignUp{
@@ -79,13 +81,14 @@ body{
 	clear: both;
 	text-align: center;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	border-width: 1px;
 	width: 360px;
+	background: white;
 
 }
 a{
-	color: white;
+	color: black;
 }
 a:hover{
 	color: red;
@@ -105,7 +108,7 @@ a:hover{
 
 .navigation li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -120,8 +123,12 @@ a:hover{
 	float: right;
 	clear: both;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	border-width: 1px;
 	width: 200px;
 
+}
+
+table {
+	margin: 0 auto;
 }
