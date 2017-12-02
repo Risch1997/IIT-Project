@@ -12,7 +12,7 @@
 				</tr>
 				<tr>
 					<td><input type="submit" name="loginSubmit" value="Register" class="submit"></td>
-				</tr>
+				</tr> 
 			</table>
 		</form>
 	</div>
