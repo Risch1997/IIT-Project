@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 // Create a new user and add it to the `users` database
 function create_user($firstName, $lastName, $email, $password) {
@@ -68,7 +68,7 @@ function user_exists($email) {
     global $dbcon;
 
     // Query database for a user with the given email
-    $query = $dbcon->query("SELECT * FROM `users` WHERE `email`='$email';");
+    $query = $dbcon->query("SELECT * FROM `users` WHERE `email`='$email'");
     $user = $query->fetch(PDO::FETCH_ASSOC);
 
     // Check if we found any users and return accordingly
