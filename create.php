@@ -35,20 +35,20 @@ If you think you have received this message in error, please ignore this email."
 		?>
 
 		<div id="creategroupdiv">
-		<h1>Create Group</h1>
-		<?php if(isset($error)) echo $error; ?>
-		<form name="creategroup" action="" method="POST">
-			<table id="creategrouptable">
-				<tr>
-					<td><input type="text" name="groupName" placeholder="Create a group name"></td>
-				</tr>
-				<tr>
-					<td><input type="text" name="email1" placeholder="Send invitation to valid email address"></td>
-				</tr>
-					<td><input type="submit" name="groupSubmit" value="Create" class="submit"></td>
-				</tr>
-			</table>
-		</form>
-	</div>
-	</body>
-</html>
+			<h1>Create Group</h1>
+			<?php if(isset($error)) echo $error; ?>
+			<form name="creategroup" action="" method="POST">
+				<table id="creategrouptable">
+					<tr>
+						<td><input type="text" name="groupName" placeholder="Create a group name"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="email1" placeholder="Send invitation to valid email address"></td>
+					</tr>
+						<td><input type="submit" name="groupSubmit" value="Create" class="submit"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+<?php include('includes/footer.php'); ?>
