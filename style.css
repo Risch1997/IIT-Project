@@ -53,13 +53,9 @@ body{
 	border: 1px solid black;
 }
 
-.submit a{
-	text-decoration: none;
-}
-
-.submit a:hover{
-	color: black;
-	text-decoration: underline;
+.submit:hover{
+	background-color: rgb(247,244,184);
+	cursor: pointer;
 }
 
 input[type=text], input[type=email], input[type=password]{
