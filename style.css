@@ -51,6 +51,8 @@ body{
 	color: black;
 	background-color: rgb(188,204,184);
 	border: 1px solid black;
+	width:75px;
+	height: 40px;
 }
 
 .submit a{
@@ -131,4 +133,11 @@ a:hover{
 
 table {
 	margin: 0 auto;
+}
+
+#join{
+	font-size: 40px;
+	display: table;
+	clear: both;
+
 }
