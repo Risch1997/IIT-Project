@@ -11,7 +11,7 @@ function db_connect($select_db = true) {
         'name'    =>  'choretracker',
         'host'    =>  'localhost',
         'user'    =>  'root',
-        'pass'    =>  'gu355b4n4n4m0n3y'
+        'pass'    =>  '5841156'
 	);
 
     try {
