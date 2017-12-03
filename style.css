@@ -85,8 +85,20 @@ input[type=text], input[type=email], input[type=password]{
 	border-width: 1px;
 	width: 360px;
 	background: white;
-
 }
+
+#creategroupdiv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	background: white;
+}
+
 a{
 	color: black;
 }
