@@ -12,7 +12,7 @@ function db_connect($select_db = true) {
         'host'    =>  'localhost',
         'user'    =>  'root',
         'pass'    =>  'gu355b4n4n4m0n3y'
-    );
+	);
 
     try {
         // Connect to database as defined in config
@@ -30,6 +30,7 @@ function db_connect($select_db = true) {
             }
         }
     } catch(PDOException $e) {
+        echo $e;
         return false;
     }
 

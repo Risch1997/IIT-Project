@@ -69,15 +69,13 @@ body{
 	color: black;
 	background-color: rgb(188,204,184);
 	border: 1px solid black;
+	width:75px;
+	height: 40px;
 }
 
-.submit a{
-	text-decoration: none;
-}
-
-.submit a:hover{
-	color: black;
-	text-decoration: underline;
+.submit:hover{
+	background-color: rgb(247,244,184);
+	cursor: pointer;
 }
 
 input[type=text], input[type=email], input[type=password]{
@@ -103,8 +101,58 @@ input[type=text], input[type=email], input[type=password]{
 	border-width: 1px;
 	width: 360px;
 	background: white;
-
 }
+
+#select{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	height:250px;
+	background: white;
+}
+
+.selectbutton{
+	font-size: 12px;
+	width: 200px;
+	height: 40px;
+	margin: 10px auto;
+	padding: 5px;
+	display: block;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
+}
+
+.selecthref{
+	text-decoration:none;
+}
+
+.selecthref:hover{
+	color: rgb(247,244,184);
+}
+
+.selecthref button:hover{
+	cursor: pointer;
+	background: rgb(247,244,184);
+}
+
+#creategroupdiv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	background: white;
+}
+
 a{
 	color: black;
 }
@@ -149,4 +197,11 @@ a:hover{
 
 table {
 	margin: 0 auto;
+}
+
+#join{
+	font-size: 40px;
+	display: table;
+	clear: both;
+
 }
