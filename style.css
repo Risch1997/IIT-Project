@@ -135,6 +135,19 @@ input[type=text], input[type=email], input[type=password]{
 	background: white;
 }
 
+#joindiv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	height: 165px;
+	background: white;
+}
+
 a{
 	color: black;
 }
