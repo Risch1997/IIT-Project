@@ -9,9 +9,9 @@ function db_connect($select_db = true) {
 
     $db_config = array(
         'name'    =>  'choretracker',
-        'host'    =>  'localhost:3366',
+        'host'    =>  'localhost',
         'user'    =>  'root',
-        'pass'    =>  'password'
+        'pass'    =>  '5841156'
     );
 
     try {
