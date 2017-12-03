@@ -1,5 +1,6 @@
 <?php include('includes/top.php'); ?>
-
+<html>
+	<body>
 		<h1>Log In</h1>
 		<form name="login" action="" method="POST">
 			<table id="login">

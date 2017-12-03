@@ -9,7 +9,7 @@ function db_connect($select_db = true) {
 
     try {
         // Connect to database as defined in config
-        $dbcon = new PDO('mysql:host='.$db_config['host'].';', $db_config['user'], $db_config['pass']);
+        $dbcon = new PDO("mysql:host=".$db_config['host'].";", $db_config['user'], $db_config['pass']);
 
         // Set error mode
         $dbcon->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
