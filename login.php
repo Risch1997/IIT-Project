@@ -13,7 +13,7 @@
 					<td><input type="password" name="password" placeholder="Password"></td>
 				</tr>
 				<tr>
-					<td><input type="submit" name="loginSubmit" value="Register" class="submit"></td>
+					<td><input type="submit" name="loginSubmit" value="Login" class="submit"></td>
 				</tr>
 			</table>
 		</form>
