@@ -38,16 +38,15 @@ If you think you have received this message in error, please ignore this email."
 			<h1>Create Group</h1>
 			<?php if(isset($error)) echo $error; ?>
 			<form name="creategroup" action="" method="POST">
-				<table id="creategrouptable">
+				<table id="createGroupTable">
 					<tr>
 						<td><input type="text" name="groupName" placeholder="Create a group name"></td>
 					</tr>
 					<tr>
 						<td><input type="text" name="email1" placeholder="Send invitation to valid email address"></td>
 					</tr>
-						<td><input type="submit" name="groupSubmit" value="Create" class="submit"></td>
-					</tr>
 				</table>
+				<button class="submit" type="button" id="addEmail">Add Another Email</button><input type="submit" name="groupSubmit" value="Create" class="submit">
 			</form>
 		</div>
 

@@ -65,12 +65,12 @@ body{
 .submit{
 	margin: 10px auto;
 	padding: 5px;
-	display: block;
+	display: inline-block;
 	color: black;
 	background-color: rgb(188,204,184);
 	border: 1px solid black;
-	width:75px;
-	height: 40px;
+	min-width:75px;
+	min-height: 40px;
 }
 
 .submit:hover{
