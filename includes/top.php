@@ -12,23 +12,6 @@ include('resources/functions/load.php');
 	</head>
 	<body>
 
-			<h1 class="Name"><a href="index.php">ChoreTracker.com</a></h1>
-
-			<?php
-			if(isset($_SESSION['status']) && $_SESSION['status'] == 'authorized') {
-				$query = $dbcon->query("SELECT * FROM `users` WHERE userID = " . $_SESSION['userID']);
-				$user = $query->fetch(PDO::FETCH_ASSOC);
-
-				echo "
-				<div class=\"SignUp\">
-					Welcome, " . $user['firstName'] . "! <a href=\"index.php?status=logout\">Logout</a>
-				</div>";
-			}
-			else{
-				echo "<div class=\"SignUp\"><a href=\"login.php\">Log In</a></div>";
-			}
-			?>
-
 <?php
 
 // Handle users logging in
@@ -86,3 +69,21 @@ if(isset($_GET['status']) && $_GET['status'] == 'logout') {
 }
 
 ?>
+		<div class="top">
+			<h1 class="Name"><a href="index.php">ChoreTracker.com</a></h1>
+			<?php
+			if(isset($_SESSION['status']) && $_SESSION['status'] == 'authorized') {
+				$query = $dbcon->query("SELECT * FROM `users` WHERE userID = " . $_SESSION['userID']);
+				$user = $query->fetch(PDO::FETCH_ASSOC);
+
+				echo "
+				<div class=\"SignUp\">
+				Welcome, " . $user['firstName'] . "! <a href=\"index.php?status=logout\">Logout</a>
+				</div>";
+			}
+			else{
+				echo "<div class=\"SignUp\"><a href=\"login.php\">Log In</a></div>";
+			}
+			?>
+			
+		</div>

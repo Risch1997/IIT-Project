@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	font-weight: 100;
 	background-image: url("resources/images/background3.png");
 	color: black;
+	margin: 0
 }
 .Name{
 	color: black;
@@ -13,6 +15,22 @@ body{
 	float: left;
 	clear: none;
 	display: block;
+}
+
+.content {
+	width: 98%;
+	background: white;
+	height: 80vh;
+	margin: 0px auto;
+	padding: 1%;
+	border-top: 1px solid black;
+}
+
+.top {
+	width: 98%;
+	display: inline-block;
+	height: 20vh;
+	padding: 1%;
 }
 
 .Name a{
