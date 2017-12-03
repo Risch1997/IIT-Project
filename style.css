@@ -112,12 +112,17 @@ input[type=text], input[type=email], input[type=password]{
 	border: 1px solid black;
 }
 
-.selectbutton a{
-	text-decoration: none;
+.selecthref{
+	text-decoration:none;
 }
 
-.selectbutton a:hover{
+.selecthref:hover{
 	color: rgb(247,244,184);
+}
+
+.selecthref button:hover{
+	cursor: pointer;
+	background: rgb(247,244,184);
 }
 
 #creategroupdiv{
