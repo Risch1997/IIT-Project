@@ -7,5 +7,6 @@ $db_config = array(
     'host'    =>  'localhost',
     'user'    =>  'root',
 	'pass'	  =>  'password'
+);
 
 ?>
