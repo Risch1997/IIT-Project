@@ -9,9 +9,9 @@ function db_connect($select_db = true) {
 
     $db_config = array(
         'name'    =>  'choretracker',
-        'host'    =>  'localhost',
+        'host'    =>  'localhost:3366',
         'user'    =>  'root',
-        'pass'    =>  '5841156'
+        'pass'    =>  'password'
     );
 
     try {
@@ -30,6 +30,7 @@ function db_connect($select_db = true) {
             }
         }
     } catch(PDOException $e) {
+        echo $e;
         return false;
     }
 
