@@ -11,8 +11,8 @@ function db_connect($select_db = true) {
         'name'    =>  'choretracker',
         'host'    =>  'localhost',
         'user'    =>  'root',
-        'pass'    =>  '5841156'
-    );
+        'pass'    =>  'gu355b4n4n4m0n3y'
+	);
 
     try {
         // Connect to database as defined in config
@@ -47,6 +47,17 @@ function make_safe($string) {
     $string = strip_tags($string);
 
     return $string;
+}
+
+//Generate a random string
+function randomString($length = 8) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }
 
 ?>

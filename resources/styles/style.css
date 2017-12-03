@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
+
+body{
+	font-family: 'Helvetica', sans-serif;
+	font-weight: 100;
+	background-image: url("../images/background3.png");
+	color: black;
+	margin: 0
+}
+.Name{
+	color: black;
+	font-size: 50px;
+	float: left;
+	clear: none;
+	display: block;
+}
+
+.content {
+	width: 98%;
+	background: white;
+	height: 80vh;
+	margin: 0px auto;
+	padding: 1%;
+	border-top: 1px solid black;
+}
+
+.top {
+	width: 98%;
+	display: inline-block;
+	height: 20vh;
+	padding: 1%;
+}
+
+.Name a{
+	text-decoration: none;
+}
+.Name a:hover{
+	color: black;
+}
+
+#loginfield h1{
+	text-align: center;
+
+}
+
+#loginfield{
+	clear: both;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	height: 260px;
+	margin: 0 auto;
+	padding: 0;
+	background: white;
+
+}
+
+.login{
+	background: black;
+}
+
+.submit{
+	margin: 10px auto;
+	padding: 5px;
+	display: inline-block;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
+	min-width:75px;
+	min-height: 40px;
+}
+
+.submit:hover{
+	background-color: rgb(247,244,184);
+	cursor: pointer;
+}
+
+input[type=text], input[type=email], input[type=password]{
+	margin: 8px auto;
+	padding: 12px;
+	display: block;
+	border: 1px solid black;
+	width: 300px;
+}
+.SignUp{
+	float: right;
+	height:50px;
+	padding-top: 50px;
+	font-size: 20px;
+}
+#create{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	background: white;
+}
+
+#select{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	height:250px;
+	background: white;
+}
+
+.selectbutton{
+	font-size: 12px;
+	width: 200px;
+	height: 40px;
+	margin: 10px auto;
+	padding: 5px;
+	display: block;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
+}
+
+.selecthref{
+	text-decoration:none;
+}
+
+.selecthref:hover{
+	color: rgb(247,244,184);
+}
+
+.selecthref button:hover{
+	cursor: pointer;
+	background: rgb(247,244,184);
+}
+
+#creategroupdiv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	background: white;
+}
+
+#joindiv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	background: white;
+}
+
+a{
+	color: black;
+}
+a:hover{
+	color: red;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear: both;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navigation li a:hover {
+    background-color: #111;
+}
+
+#members{
+	float: right;
+	clear: both;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 200px;
+
+}
+
+table {
+	margin: 0 auto;
+}
+
+#join{
+	font-size: 40px;
+	display: table;
+	clear: both;
+
+}
