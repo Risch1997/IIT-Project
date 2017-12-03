@@ -7,6 +7,13 @@ include('functions_user.php');
 function db_connect($select_db = true) {
     global $db_config, $dbcon;
 
+    $db_config = array(
+        'name'    =>  'choretracker',
+        'host'    =>  'localhost',
+        'user'    =>  'root',
+        'pass'    =>  '5841156'
+    );
+
     try {
         // Connect to database as defined in config
         $dbcon = new PDO("mysql:host=".$db_config['host'].";", $db_config['user'], $db_config['pass']);

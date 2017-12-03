@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	background-image: url("resources/images/background3.png");
+	color: black;
+}
+.Name{
+	color: black;
+	font-size: 50px;
+	float: left;
+	clear: none;
+	display: block;
+}
+
+.Name a{
+	text-decoration: none;
+}
+.Name a:hover{
+	color: black;
+}
+
+#loginfield h1{
+	text-align: center;
+
+}
+
+#loginfield{
+	clear: both;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	height: 260px;
+	margin: 0 auto;
+	padding: 0;
+	background: white;
+
+}
+
+.login{
+	background: black;
+}
+
+.submit{
+	margin: 10px auto;
+	padding: 5px;
+	display: block;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
+}
+
+.submit a{
+	text-decoration: none;
+}
+
+.submit a:hover{
+	color: black;
+	text-decoration: underline;
+}
+
+input[type=text], input[type=email], input[type=password]{
+	margin: 8px auto;
+	padding: 12px;
+	display: block;
+	border: 1px solid black;
+	width: 300px;
+}
+.SignUp{
+	float: right;
+	height:50px;
+	padding-top: 50px;
+	font-size: 20px;
+}
+#create{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	background: white;
+
+}
+a{
+	color: black;
+}
+a:hover{
+	color: red;
+}
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    clear: both;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navigation li a:hover {
+    background-color: #111;
+}
+
+#members{
+	float: right;
+	clear: both;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 200px;
+
+}
+
+table {
+	margin: 0 auto;
+}
