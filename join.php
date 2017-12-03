@@ -7,6 +7,6 @@
 			<td><input type="text" name="join" placeholder="Enter provided code"></td>
 			<td><input type="submit" name="joingroup" value="Join!"></td>
 		</div>
-		
+
 	</body>
 </html>
