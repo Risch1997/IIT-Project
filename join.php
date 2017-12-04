@@ -20,7 +20,7 @@
  				}
  			}
  		?>
-
+ 	<div id="joindiv">
  		<form name="joinGroup" action="" method="POST">
  			<?php if(isset($error)) echo $error; ?>
  			<table id="jointable">
@@ -29,5 +29,6 @@
  				<td><input type="submit" name="joinSubmit" value="Join!" class="submit"></td>
  			</table>
  		</form>
+	</div>
 
  <?php include('includes/footer.php'); ?>
