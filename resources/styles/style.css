@@ -78,6 +78,12 @@ body{
 	cursor: pointer;
 }
 
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
 input[type=text], input[type=email], input[type=password]{
 	margin: 8px auto;
 	padding: 12px;

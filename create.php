@@ -46,7 +46,9 @@
 						<td><input type="text" name="email1" placeholder="Send invitation to valid email address"></td>
 					</tr>
 				</table>
-				<button class="submit" type="button" id="addEmail">Add Another Email</button><input type="submit" name="groupSubmit" value="Create" class="submit">
+				<button class="submit" type="button" id="addEmail">Add Another Email</button>
+				<div class="divider"></div>
+				<input type="submit" name="groupSubmit" value="Create" class="submit">
 			</form>
 		</div>
 
