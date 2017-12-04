@@ -4,9 +4,9 @@
 global $dbcon;
 $db_config = array(
     'name'    =>  'choretracker',
-    'host'    =>  'localhost',
+    'host'    =>  'localhost:3366',
     'user'    =>  'root',
-	'pass'	  =>  ''
+	  'pass'	  =>  ''
 );
 
 ?>
