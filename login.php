@@ -1,7 +1,5 @@
 <?php include('includes/top.php'); ?>
 
-<html>
-	<body>
 		<div id="create">
 			<h1>Log In</h1>
 			<form name="login" action="" method="POST">
@@ -20,3 +18,4 @@
 		</div>
 	
 <?php include('includes/footer.php'); ?>
+

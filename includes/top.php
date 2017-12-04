@@ -9,6 +9,8 @@ include('resources/functions/load.php');
 		<meta charset="utf-8">
 		<link rel="stylesheet"  href="resources/styles/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="resources/scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="resources/scripts/choretracker.js"></script>
 	</head>
 	<body>
 
