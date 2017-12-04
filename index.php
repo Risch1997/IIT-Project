@@ -4,7 +4,7 @@
 		if(isset($_SESSION['status']) && $_SESSION['status'] == 'authorized') {
 			echo "
 			<div id=\"select\">
-			<h1>Select an option</h1>
+			<h1>Select an Option</h1>
 			<div class=\"groupoption\">
 				<a href=\"view.php\" class=\"selecthref\"><button class=\"selectbutton\">View Group(s)</button></a>
 			</div>
