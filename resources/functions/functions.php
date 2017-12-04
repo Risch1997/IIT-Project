@@ -9,9 +9,9 @@ function db_connect($select_db = true) {
 
     $db_config = array(
         'name'    =>  'choretracker',
-        'host'    =>  'localhost',
+        'host'    =>  'localhost:3366',
         'user'    =>  'root',
-        'pass'    =>  'gu355b4n4n4m0n3y'
+        'pass'    =>  'password'
 	);
 
     try {
@@ -58,6 +58,10 @@ function randomString($length = 8) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
+}
+
+function redirect(){
+    echo "redirecting";
 }
 
 ?>
