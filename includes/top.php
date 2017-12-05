@@ -84,7 +84,9 @@ if(isset($_GET['status']) && $_GET['status'] == 'logout') {
 			</div>";
 			}
 			else{
-				echo "<div class=\"SignUp\"><a href=\"login.php\">Log In</a> | <a href=\"register.php\">Register</a></div>";
+				echo "<div class=\"Signup\">
+				<a href=\"login.php\">Log In</a> | <a href=\"register.php\">Register</a>
+				</div>";
 			}
 			?>
 
