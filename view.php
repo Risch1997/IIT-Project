@@ -13,15 +13,13 @@
 		
 		
 		foreach ($result as $row){
-			echo '
-				<form method="post" action="group.php?id='. $row['groupID'].'">';
-			echo '<tr><td><label style="font-size:20px">' . $row['groupName'] . '</label></td>';
-
-			echo	'<input type="hidden" name="groupname" value='.'"'.$row['groupName'].'"'.'>
-				<input type="hidden" name="groupid" value='.'"'.$row['groupID'].'"'.'>
-          		<td><input type="submit" value="View" id="view_btn" class="submit" style="float:right"></form>
-          		</td></tr>';	
+			echo "
+			<tr>
+				<td><label style=\"font-size:20px\">" . $row['groupName'] . "</label></td>
+				<td><a href=\"group.php?id=" . $row['groupID'] . "\"><button type=\"button\"class=\"submit\" style=\"float:right\">View</button></a></td>
+			</tr>";	
          }
+		 echo "</table>";
 	?>
 	
 
