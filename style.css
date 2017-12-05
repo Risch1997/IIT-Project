@@ -202,3 +202,14 @@ table {
 
 }
 
+#addChore{
+	float:left;
+	border-style: solid;
+	padding: 20px;
+	margin: 20px;
+	text-align: center;
+}
+
+table#choreTable{
+	padding-bottom: 20px;
+}

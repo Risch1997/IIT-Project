@@ -1,7 +1,8 @@
 <?php include('includes/top.php'); ?>
-
+<link rel="Stylesheet" href="style.css" type="text/css" />
 
 <?php
+$userID = $_SESSION['userID'];
 if(isset($_GET['id'])) {
 	$groupID = $_GET['id'];
 	$query = $dbcon->query("SELECT * FROM groups WHERE groupID = $groupID");
@@ -13,16 +14,18 @@ if(isset($_GET['id'])) {
 		</div>";
 
 	echo "
-		<div id=\"household\" style=\"font-size:20px; border-style:solid; width: 20%; padding: 10px; float:right\">
-			Members <br>
+		<div id=\"household\" style=\"font-size:20px; border-style:solid; height: 100%; width: 20%; margin: 20px; float:right\">
+			<h3 style=\"text-align:center\">Members</h3> <br>
 			<table>";
-	$query = "SELECT users.firstName, users.lastName FROM users, group_users WHERE group_users.groupID = " . $groupID;
+	$query = "SELECT users.firstName, users.lastName,users.userID FROM users, group_users WHERE group_users.groupID = " . $groupID;
 	$result = $dbcon->query($query);
+	echo "<tr><th>First Name</th><th>Last Name</th><th>User ID</th></tr>";
 	foreach ($result as $row){
 		echo "
 				<tr>
 					<td>". $row['firstName'] . "</td>
 					<td>". $row['lastName'] . "</td>
+					<td>". $row['userID'] . "</td>
 				</tr>";
 	}
 	echo "
@@ -31,27 +34,31 @@ if(isset($_GET['id'])) {
 
 	echo "
 	
-		<div id=\"chores\" style=\"font-size:20px; border-style:solid; width: 30%; padding: 10px; float:left\">";
+		<div id=\"chores\" style=\"font-size:20px; border-style:solid; width: 47%; margin:20px; float:right;text-align:center\">";
 	if(isset($_POST['addChore'])) {
 		$choreName = isset($_POST["choreName"]) ? make_safe($_POST['choreName']) : '';
 		$choreValue = isset($_POST["choreValue"]) ? make_safe($_POST['choreValue']) : '';
+		$assignedTo = isset($_POST["assigned"]) ? make_safe($_POST['assigned']) : '';
+		$assigner = isset($_POST["assigner"]) ? make_safe($_POST['assigner']) : '';
 		$dbcon->exec("INSERT INTO `chores` (`groupID`, `choreName`, `choreValue`) VALUES ($groupID, '$choreName', $choreValue)");
+		$choreID = $dbcon->lastInsertId();
+		$dbcon->exec("INSERT INTO `events` (`reporterUserID`, `choreID`, `reportedUserID`) VALUES ($assigner, $choreID, $assignedTo)"); 
 	}
 
 ?>
-
+		
 			<h3>Chores</h3>
 			<table id="choreTable">
 				<tr>
-					<td>Chore Name</td>
-					<td>Value</td>
+					<th>Chore Name</th>
+					<th>Value</th>
 				</tr>
 			<?php
 				$query = $dbcon->query("SELECT * FROM chores WHERE groupid = $groupID");
 				while($chore = $query->fetch(PDO::FETCH_ASSOC)){
 					echo "
 				<tr>
-					<td>". $chore['choreName'] . "</td>
+					<td><a href=\"event.php?id=" . $chore['choreID'] . "\">". $chore['choreName'] . "</a></td>
 					<td>" . $chore['choreValue'] . "</td>
 				</tr>";
 				}
@@ -60,15 +67,21 @@ if(isset($_GET['id'])) {
 			?>
 			
 			</table>
+			</div>
+			<div id="addChore">
+				<h3>Add a Chore</h3>
+				<form id="createChore" name="createChore" action="" method="POST">
 
-			<h3>Add a Chore</h3>
-			<form id="createChore" name="createChore" action="" method="POST">
-				<input type="text" class="form-control" id="chore" name="choreName" placeholder="Chore Name">
+					<input type="text" class="form-control" id="chore" name="choreName" placeholder="Chore Name">
 
-				<input type="text" class="form-control" id="score-val" name="choreValue" placeholder="Score Value">
-				
-				<input type="submit" name="addChore" value="Add Chore" class="submit">
-			</form>
-		</div>
+					<input type="text" class="form-control" id="score-val" name="choreValue" placeholder="Score Value">
+
+					<input type="text" class="form-control" id="assigned" name="assigned" placeholder="Enter userID of person to assign to...">
+					
+					<input type="hidden" class="form-control" id="assigner" name="assigner" value="<?php echo $_SESSION['userID']?>"/>
+					<input type="submit" name="addChore" value="Add Chore" class="submit">
+				</form>
+			</div>
+		
 
 <?php include("includes/footer.php"); ?>
