@@ -1,5 +1,5 @@
 <?php include('includes/top.php'); ?>
-<link rel="Stylesheet" href="style.css" type="text/css" />
+
 
 <?php
 	if (isset($_GET['id'])){
@@ -19,7 +19,7 @@
 		// find name of reporter
 		$query4 = $dbcon->query("SELECT firstName, lastName FROM users WHERE users.userID = " . $event['reporterUserID']);
 		$name2 = $query4->fetch(PDO::FETCH_ASSOC);
-		echo "Reporter: " . $name2['firstName'] . " " . $name2['lastName']; 
+		echo "Reporter: " . $name2['firstName'] . " " . $name2['lastName'];
 	}
 
 ?>
