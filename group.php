@@ -17,9 +17,13 @@ if(isset($_GET['id'])) {
 		<div id=\"household\" style=\"font-size:20px; border-style:solid; height: 100%; width: 20%; margin: 20px; float:right\">
 			<h3 style=\"text-align:center\">Members</h3> <br>
 			<table>";
+
+
 	$query = "SELECT users.firstName, users.lastName,users.userID FROM users, group_users WHERE group_users.userID = users.userID AND group_users.groupID = " . $groupID;
 	// $result = $dbcon->query($query);
-	
+
+
+	echo "<tr><th>First Name</th><th>Last Name</th><th>User ID</th></tr>";
 	foreach ($dbcon->query($query) as $result){
 
 		echo "
@@ -29,7 +33,7 @@ if(isset($_GET['id'])) {
 					<td>". $result['userID'] . "</td>
 				</tr>";
 	}
-	
+
 	echo "
 			</table>
 		</div>";
