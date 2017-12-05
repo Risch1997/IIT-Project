@@ -1,5 +1,5 @@
 <?php include('includes/top.php'); ?>
-<link rel="Stylesheet" href="style.css" type="text/css" />
+
 
 <?php
 $userID = $_SESSION['userID'];
@@ -33,7 +33,7 @@ if(isset($_GET['id'])) {
 		</div>";
 
 	echo "
-	
+
 		<div id=\"chores\" style=\"font-size:20px; border-style:solid; width: 47%; margin:20px; float:right;text-align:center\">";
 	if(isset($_POST['addChore'])) {
 		$choreName = isset($_POST["choreName"]) ? make_safe($_POST['choreName']) : '';
@@ -42,11 +42,11 @@ if(isset($_GET['id'])) {
 		$assigner = isset($_POST["assigner"]) ? make_safe($_POST['assigner']) : '';
 		$dbcon->exec("INSERT INTO `chores` (`groupID`, `choreName`, `choreValue`) VALUES ($groupID, '$choreName', $choreValue)");
 		$choreID = $dbcon->lastInsertId();
-		$dbcon->exec("INSERT INTO `events` (`reporterUserID`, `choreID`, `reportedUserID`) VALUES ($assigner, $choreID, $assignedTo)"); 
+		$dbcon->exec("INSERT INTO `events` (`reporterUserID`, `choreID`, `reportedUserID`) VALUES ($assigner, $choreID, $assignedTo)");
 	}
 
 ?>
-		
+
 			<h3>Chores</h3>
 			<table id="choreTable">
 				<tr>
@@ -65,7 +65,7 @@ if(isset($_GET['id'])) {
 			}
 
 			?>
-			
+
 			</table>
 			</div>
 			<div id="addChore">
@@ -77,11 +77,11 @@ if(isset($_GET['id'])) {
 					<input type="text" class="form-control" id="score-val" name="choreValue" placeholder="Score Value">
 
 					<input type="text" class="form-control" id="assigned" name="assigned" placeholder="Enter userID of person to assign to...">
-					
+
 					<input type="hidden" class="form-control" id="assigner" name="assigner" value="<?php echo $_SESSION['userID']?>"/>
 					<input type="submit" name="addChore" value="Add Chore" class="submit">
 				</form>
 			</div>
-		
+
 
 <?php include("includes/footer.php"); ?>
