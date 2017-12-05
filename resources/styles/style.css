@@ -118,6 +118,7 @@ input[type=text], input[type=email], input[type=password]{
 	width: 250px;
 
 }
+
 #create{
 	margin: 0 auto;
 	padding: 0;
@@ -166,6 +167,18 @@ input[type=text], input[type=email], input[type=password]{
 .selecthref button:hover{
 	cursor: pointer;
 	background: rgb(247,244,184);
+}
+
+#indexdiv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	background: white;
 }
 
 #creategroupdiv{
