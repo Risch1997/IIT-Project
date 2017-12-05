@@ -79,13 +79,13 @@ if(isset($_GET['status']) && $_GET['status'] == 'logout') {
 				$user = $query->fetch(PDO::FETCH_ASSOC);
 
 				echo "
-			<div class=\"SignUp\">
-				Welcome, " . $user['firstName'] . "! <a href=\"index.php?status=logout\">Logout</a>
+			<div class=\"Signup\">
+				Welcome, " . $user['firstName'] . "! </br> <a href=\"index.php?status=logout\">Logout</a>
 			</div>";
 			}
 			else{
 				echo "<div class=\"SignUp\"><a href=\"login.php\">Log In</a> | <a href=\"register.php\">Register</a></div>";
 			}
 			?>
-			
+
 		</div>
