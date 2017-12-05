@@ -107,11 +107,16 @@ input[type=text], input[type=email], input[type=password]{
 	border: 1px solid black;
 	width: 300px;
 }
-.SignUp{
-	float: right;
-	height:50px;
+.Signup{
 	padding-top: 50px;
+	/*background: white;
+	border: 1px solid black;*/
+	float: right;
 	font-size: 20px;
+	text-align: center;
+	height: 50px;
+	width: 250px;
+
 }
 #create{
 	margin: 0 auto;
