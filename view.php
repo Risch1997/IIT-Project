@@ -6,7 +6,7 @@
 	
 	<?php
 		echo '<table class="groupList" style="border:solid; width: 30%">';
-		$query = "SELECT groups.groupName, groups.groupID FROM groups, group_users WHERE ". $_SESSION['userID']." = group_users.userID";
+		$query = "SELECT groups.groupName, groups.groupID FROM groups, group_users WHERE ". $_SESSION['userID']." = group_users.userID AND group_users.groupID = groups.groupID";
 		
 		$result = $dbcon->query($query);
 		
