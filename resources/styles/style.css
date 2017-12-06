@@ -94,6 +94,36 @@ body{
 	cursor: pointer;
 }
 
+.editchoresubmit{
+	/*margin: 10px auto;
+	padding: 5px;*/
+	display: inline-block;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
+	width: 100%;
+	height:50px;
+}
+
+.editchoresubmit:hover{
+	background-color: rgb(247,244,184);
+	cursor: pointer;
+}
+
+.profilesubmit{
+	display: inline-block;
+	color: black;
+	background-color: rgb(188,204,184);
+	border: 1px solid black;
+	width: 50px;
+	height: 35px;
+}
+
+.proiflesubmit:hover{
+	background-color: rgb(247,244,184);
+	cursor: pointer;
+}
+
 .divider{
     width:5px;
     height:auto;
@@ -220,6 +250,92 @@ input[type=text], input[type=email], input[type=password]{
 	text-align: center;
 }
 
+#choresdiv{
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+	width: 400px;
+	background: white;
+	text-align: center;
+}
+
+#groupwelcomediv{
+	text-align: center;
+}
+
+#household{
+	margin: 0 100px 0 0;
+	float: right;
+}
+#householddiv {
+	margin: 0 auto;
+	padding: 0;
+	border: 1px solid black;
+	width: 300px;
+	background: white;
+	text-align: center;
+}
+
+#householdtable{
+	margin: 10px auto;
+	background: white;
+	width: 80%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#householdtable tr{
+	border: 1px solid black;
+	height: 30px;
+}
+
+#chorestable{
+	margin: 10px;
+	background: white;
+	width: 30%;
+	border-collapse: collapse;
+}
+
+#chorestable tr{
+	 border: 1px solid black;
+}
+
+#addchorediv{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	background: white;
+}
+
+#addeventdiv{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 360px;
+	background: white;
+}
+
+#editchorediv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	width: 500px;
+	background: white;
+
+}
+
+
 .grouplisttable{
 	margin: 10px auto;
 	background:white;
@@ -227,10 +343,17 @@ input[type=text], input[type=email], input[type=password]{
 	width: 30%;
 }
 
+
+
 .tdlable {
 	text-align: center;
 	background: white;
 	border: 1px solid black;
+}
+
+.choretdlable {
+	text-align: center;
+	background: white;
 }
 
 .viewtr {
