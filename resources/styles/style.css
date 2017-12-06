@@ -9,6 +9,29 @@ body{
 	color: black;
 	margin: 0
 }
+
+h2{
+	margin: 15px auto;
+	padding: 0 0 10px 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+#h2event{
+		border-bottom: 1px solid black;
+}
+
+ul {
+	margin: 0 0 10px 0 auto;
+	padding: 0;
+  list-style-type: none;
+}
+
+li {
+	font-size: 20px;
+	margin: 5px;
+}
+
 .Name{
 	color: black;
 	font-size: 50px;
@@ -256,6 +279,26 @@ input[type=text], input[type=email], input[type=password]{
 	border-width: 1px;
 	width: 500px;
 	background: white;
+}
+
+#profilediv{
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	border: 1px solid black;
+	width: 500px;
+	background: white;
+	text-align: center;
+}
+
+#profileinfo{
+	margin: 10px auto;
+	padding: 0;
+	clear: both;
+	border: 1px solid black;
+	width: 500px;
+	background: white;
+	text-align: center;
 }
 
 #viewdiv h1{
