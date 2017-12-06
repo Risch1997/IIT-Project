@@ -21,8 +21,7 @@
 				<h1>Welcome to Chore Tracker!</h1>
 			</div>
 			<div id=\"indexdiv\">
-				<h2 style='font-size: 40px'>Welcome to Chore Tracker!</h2>
-				<p style='font-size: 20px'>Where chore tracking is made easy</p>
+				<p style='font-size: 20px'>Where chore tracking is made easy.</p>
 				<img src='resources/images/chore.png' alt='chore icon'>
 			</div>
 			";
