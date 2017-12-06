@@ -7,6 +7,25 @@ if(isset($_GET['id'])) {
 	$groupID = $_GET['id'];
 	$query = $dbcon->query("SELECT * FROM groups WHERE groupID = $groupID");
 	$group = $query->fetch(PDO::FETCH_ASSOC);
+	
+	if(isset($_POST['addChore'])) {
+		$choreName = isset($_POST["choreName"]) ? make_safe($_POST['choreName']) : '';
+		$choreValue = isset($_POST["choreValue"]) ? make_safe($_POST['choreValue']) : '';
+		$dbcon->exec("INSERT INTO `chores` (`groupID`, `choreName`, `choreValue`) VALUES ($groupID, '$choreName', $choreValue)");
+	}
+	if(isset($_POST['reportSubmit'])) {
+		
+		$reporterUserID = $_SESSION['userID'];
+		$choreID = isset($_POST["chore"]) ? make_safe($_POST['chore']) : '';
+		$reportedUserID = isset($_POST["reportedUser"]) ? make_safe($_POST['reportedUser']) : '';
+		$dbcon->exec("INSERT INTO `events` (`reporterUserID`, `groupID`, `choreID`, `reportedUserID`) VALUES ($reporterUserID, $groupID, $choreID, $reportedUserID)");
+		
+		$query = $dbcon->query("SELECT `choreValue` FROM `chores` WHERE `choreID` = $choreID");
+		$chore = $query->fetch(PDO::FETCH_ASSOC);
+		$query = $dbcon->query("SELECT score FROM `group_users` WHERE `groupID` = $groupID AND `userID` = $reportedUserID");
+		$user = $query->fetch(PDO::FETCH_ASSOC);
+		$dbcon->exec("UPDATE `group_users` SET `score` = " . ($chore['choreValue'] + $user['score']) . " WHERE `groupID` = $groupID AND `userID` = $reportedUserID");
+	}
 
 	echo "
 		<div style=\"font-size:30px; margin:10px\">
@@ -41,24 +60,6 @@ if(isset($_GET['id'])) {
 	echo "
 
 		<div id=\"chores\" style=\"font-size:20px; border-style:solid; width: 29%; margin:20px; float:right;text-align:center\">";
-	if(isset($_POST['addChore'])) {
-		$choreName = isset($_POST["choreName"]) ? make_safe($_POST['choreName']) : '';
-		$choreValue = isset($_POST["choreValue"]) ? make_safe($_POST['choreValue']) : '';
-		$dbcon->exec("INSERT INTO `chores` (`groupID`, `choreName`, `choreValue`) VALUES ($groupID, '$choreName', $choreValue)");
-	}
-	if(isset($_POST['reportSubmit'])) {
-		
-		$reporterUserID = $_SESSION['userID'];
-		$choreID = isset($_POST["chore"]) ? make_safe($_POST['chore']) : '';
-		$reportedUserID = isset($_POST["reportedUser"]) ? make_safe($_POST['reportedUser']) : '';
-		$dbcon->exec("INSERT INTO `events` (`reporterUserID`, `groupID`, `choreID`, `reportedUserID`) VALUES ($reporterUserID, $groupID, $choreID, $reportedUserID)");
-		
-		$query = $dbcon->query("SELECT `choreValue` FROM `chores` WHERE `choreID` = $choreID");
-		$chore = $query->fetch(PDO::FETCH_ASSOC);
-		$query = $dbcon->query("SELECT score FROM `group_users` WHERE `groupID` = $groupID AND `userID` = $reportedUserID");
-		$user = $query->fetch(PDO::FETCH_ASSOC);
-		$dbcon->exec("UPDATE `group_users` SET `score` = " . ($chore['choreValue'] + $user['score']) . " WHERE `groupID` = $groupID AND `userID` = $userID");
-	}
 
 ?>
 

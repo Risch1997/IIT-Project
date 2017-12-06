@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2017 at 02:17 PM
+-- Generation Time: Dec 06, 2017 at 02:28 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -40,8 +40,9 @@ CREATE TABLE `chores` (
 --
 
 INSERT INTO `chores` (`choreID`, `choreName`, `groupID`, `choreValue`) VALUES
-(1, 'Cleaning Dishes', 1, 100),
-(2, 'Taking out the Trash', 1, 50);
+(1, 'Cleaning the Dishes', 1, 100),
+(2, 'Taking out the Trash', 1, 50),
+(3, 'Leave Trash Lying Around', 1, -50);
 
 -- --------------------------------------------------------
 
@@ -52,9 +53,19 @@ INSERT INTO `chores` (`choreID`, `choreName`, `groupID`, `choreValue`) VALUES
 CREATE TABLE `events` (
   `eventID` int(11) UNSIGNED NOT NULL,
   `reporterUserID` int(11) NOT NULL,
+  `groupID` int(11) UNSIGNED NOT NULL,
   `choreID` int(11) NOT NULL,
   `reportedUserID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`eventID`, `reporterUserID`, `groupID`, `choreID`, `reportedUserID`) VALUES
+(1, 2, 1, 2, 1),
+(2, 2, 1, 1, 1),
+(3, 2, 1, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -73,7 +84,7 @@ CREATE TABLE `groups` (
 --
 
 INSERT INTO `groups` (`groupID`, `groupName`, `groupCode`) VALUES
-(1, 'Test Group 1', 'ea7PYfED');
+(1, 'Test Group', 'HUyRYPnq');
 
 -- --------------------------------------------------------
 
@@ -83,15 +94,17 @@ INSERT INTO `groups` (`groupID`, `groupName`, `groupCode`) VALUES
 
 CREATE TABLE `group_users` (
   `groupID` int(11) UNSIGNED NOT NULL,
-  `userID` int(11) UNSIGNED NOT NULL
+  `userID` int(11) UNSIGNED NOT NULL,
+  `score` int(10) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `group_users`
 --
 
-INSERT INTO `group_users` (`groupID`, `userID`) VALUES
-(1, 1);
+INSERT INTO `group_users` (`groupID`, `userID`, `score`) VALUES
+(1, 1, 100),
+(1, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -114,7 +127,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`userID`, `username`, `password`, `salt`, `email`, `firstName`, `lastName`) VALUES
-(1, '', 'f2b4e537e6ebdb2fd7b82218c3f76c820e5e626b96b465497e4590cc1f255285', '9a4b2c2eebffdd6232521c5e61ae313bcab760e6118aa13c7280e689b7521686', 'lipscc@rpi.edu', 'Chris', 'Lipscomb');
+(1, '', '38e64e53a0336853ef1f8c4425a10ddb0c8f3f5cf455e6eac2cabd42488e3153', 'c9c856312d63b6079834c7d9e532891a9da6ba8cbac038f8c84494c85580dcfe', 'lipscc@rpi.edu', 'Chris', 'Lipscomb'),
+(2, '', 'bc787501820eff6b1bac1c3c4fa2b16f0011ecada9dd88e5371038612bb46f43', '5d75de27b524a367d1ce07e9ace314a6c32d5eb8e6b81298605f3dcc37d66d3d', 'risch1996@gmail.com', 'Chris2', 'Lipscomb');
 
 --
 -- Indexes for dumped tables
@@ -158,13 +172,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `chores`
 --
 ALTER TABLE `chores`
-  MODIFY `choreID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `choreID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `eventID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `eventID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `groups`
@@ -176,7 +190,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

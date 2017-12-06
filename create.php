@@ -29,7 +29,7 @@
  							$error = "An error occurred: Unable to send email to $recipient";
  						$i++;
  					}
- 					header("Location: index.php");
+ 					//header("Location: index.php");
  				}
  			}
  		?>
