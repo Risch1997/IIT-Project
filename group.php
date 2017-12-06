@@ -50,7 +50,7 @@ if(isset($_GET['id'])) {
 			</div>";
 
 
-	$query = "SELECT users.firstName, users.lastName,group_users.score FROM users, group_users WHERE group_users.userID = users.userID AND group_users.groupID = " . $groupID;
+	$query = "SELECT users.firstName, users.lastName, users.userID ,group_users.score FROM users, group_users WHERE group_users.userID = users.userID AND group_users.groupID = " . $groupID;
 	// $result = $dbcon->query($query);
 
 
@@ -62,7 +62,8 @@ if(isset($_GET['id'])) {
 					<td>". $result['firstName'] . "</td>
 					<td>". $result['lastName'] . "</td>
 					<td>". $result['score'] . "</td>
-					<td><input type=\"submit\" name=\"viewProfile\" value=\"View\" class=\"profilesubmit\"></td>
+					
+					<td><a href=\"profile.php?userID=" . $result['userID'] . "&groupID=$groupID\"><input type=\"submit\" name=\"viewProfile\" value=\"View\" class=\"profilesubmit\"></a></td>
 				</tr>";
 	}
 
