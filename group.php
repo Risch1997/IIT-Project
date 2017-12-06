@@ -33,6 +33,15 @@ if(isset($_GET['id'])) {
 			<h1>Welcome to the " . $group['groupName'] . " household!</h1>
 		</div>
 
+		<div id=\"addchorediv\">
+			<h1>Add a Chore</h1>
+			<form id=\"createChore\" name=\"createChore\" action=\"\" method=\"POST\">
+				<input type=\"text\" class=\"form-control\" id=\"chore\" name=\"choreName\" placeholder=\"Chore Name\">
+				<input type=\"text\" class=\"form-control\" id=\"score-val\" name=\"choreValue\" placeholder=\"Score Value\">
+				<input type=\"submit\" name=\"addChore\" value=\"Add Chore\" class=\"submit\">
+			</form>
+		</div>
+
 		<div id=\"household\">
 		<div id=\"householddiv\">
 			<h1>Members</h1>
@@ -62,13 +71,14 @@ if(isset($_GET['id'])) {
 		</div>";
 
 ?>
+				<div id="chores">
+					<div id="choresdiv">
+						<h1>Chores</h1>
+					</div>
 
-				<div id="choresdiv">
-				<h1>Chores</h1>
-				</div>
 
+					<table id="chorestable">
 
-				<table id="chorestable">
 					<tr>
 						<th>Chore Name</th>
 						<th>Chore Value</th>
@@ -90,15 +100,9 @@ if(isset($_GET['id'])) {
 				?>
 
 				</table>
-
-				<div id="addchorediv">
-				<h1>Add a Chore</h1>
-				<form id="createChore" name="createChore" action="" method="POST">
-					<input type="text" class="form-control" id="chore" name="choreName" placeholder="Chore Name">
-					<input type="text" class="form-control" id="score-val" name="choreValue" placeholder="Score Value">
-					<input type="submit" name="addChore" value="Add Chore" class="submit">
-				</form>
 			</div>
+
+
 
 			<div id="addeventdiv">
 				<h1>Report an Event</h1>

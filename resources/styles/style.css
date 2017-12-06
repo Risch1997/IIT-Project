@@ -115,7 +115,7 @@ body{
 	color: black;
 	background-color: rgb(188,204,184);
 	border: 1px solid black;
-	width: 50px;
+	width: 60px;
 	height: 35px;
 }
 
@@ -251,7 +251,7 @@ input[type=text], input[type=email], input[type=password]{
 }
 
 #choresdiv{
-	margin: 0;
+	margin: 10px auto;
 	padding: 0;
 	border: 1px solid black;
 	width: 400px;
@@ -286,13 +286,13 @@ input[type=text], input[type=email], input[type=password]{
 
 #householdtable tr{
 	border: 1px solid black;
-	height: 30px;
+	height:40px;
 }
 
 #chorestable{
-	margin: 10px;
+	margin: 10px auto;
 	background: white;
-	width: 30%;
+	width: 400px;
 	border-collapse: collapse;
 }
 
@@ -301,25 +301,27 @@ input[type=text], input[type=email], input[type=password]{
 }
 
 #addchorediv{
-	margin: 0;
+	float: left;
+	margin: 0 0 0 100px;
 	padding: 0;
 	text-align: center;
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
+	border: 1px solid black;
 	width: 360px;
 	background: white;
 }
 
 #addeventdiv{
-	margin: 0;
+	float: left;
+	margin: 0 0 0 100px;
 	padding: 0;
 	text-align: center;
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
+	border: 1px solid black;
 	width: 360px;
 	background: white;
+}
+
+#chores{
+	margin: 0 0 0 100px;
 }
 
 #editchorediv{
