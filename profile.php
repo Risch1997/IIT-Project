@@ -34,3 +34,7 @@
 	}
 
 ?>
+<<<<<<< HEAD
+=======
+<?php include('includes/footer.php') ?>	
+>>>>>>> 8a4386423af51a587a03416a3db31c25ae17de25
