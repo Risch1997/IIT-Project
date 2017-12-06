@@ -17,9 +17,12 @@
 		}
 		else {
 			echo "
+			<div id=\"indexwelcomediv\">
+				<h1>Welcome to Chore Tracker!</h1>
+			</div>
 			<div id=\"indexdiv\">
-				<h2>Welcome to Chore Tracker!</h2>
-				<p>Here is where stuff goes.</p>
+				<p>Please login or register.<p>
+			</div>
 			";
 		}
 		?>
