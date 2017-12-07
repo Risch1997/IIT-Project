@@ -6,6 +6,13 @@ include('functions_user.php');
 // Attempt to connect to the database
 function db_connect($select_db = true) {
     global $db_config, $dbcon;
+	
+	$db_config = array(
+		'name'    =>  'choretracker',
+		'host'    =>  'localhost',
+		'user'    =>  'root',
+		'pass'	  =>  'gu355b4n4n4m0n3y'
+	);
 
     try {
         // Connect to database as defined in config

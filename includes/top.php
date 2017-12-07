@@ -80,7 +80,7 @@ if(isset($_GET['status']) && $_GET['status'] == 'logout') {
 
 				echo "
 			<div class=\"Signup\">
-				Welcome, " . $user['firstName'] . "! </br> <a href=\"index.php?status=logout\">Logout</a>
+				Welcome, " . $user['firstName'] . "! <br/> <a href=\"index.php?status=logout\">Logout</a>
 			</div>";
 			}
 			else{
@@ -91,3 +91,4 @@ if(isset($_GET['status']) && $_GET['status'] == 'logout') {
 			?>
 
 		</div>
+		<div class="content">

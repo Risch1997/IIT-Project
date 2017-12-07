@@ -2,12 +2,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
 @import url('https://fonts.googleapis.com/css?family=Helvetica');
 
+body, html {
+	height: 100%;
+}
+
 body{
 	font-family: 'Helvetica', sans-serif;
 	font-weight: 100;
 	background-image: url("../images/background3.png");
 	color: black;
-	margin: 0
+	margin: 0;
+	padding-bottom: 60px;
+	position: relative;
 }
 
 h2{
@@ -42,17 +48,15 @@ li {
 
 .content {
 	width: 98%;
-	background: white;
-	height: 80vh;
+	display: block;
 	margin: 0px auto;
 	padding: 1%;
-	border-top: 1px solid black;
+	padding-bottom: 60px;
 }
 
 .top {
 	width: 98%;
 	display: inline-block;
-	height: 20vh;
 	padding: 1%;
 }
 
@@ -117,7 +121,7 @@ li {
 	cursor: pointer;
 }
 
-.editchoresubmit{
+.tableButton {
 	/*margin: 10px auto;
 	padding: 5px;*/
 	display: inline-block;
@@ -128,7 +132,7 @@ li {
 	height:50px;
 }
 
-.editchoresubmit:hover{
+.tableButton:hover {
 	background-color: rgb(247,244,184);
 	cursor: pointer;
 }
@@ -142,7 +146,7 @@ li {
 	height: 35px;
 }
 
-.proiflesubmit:hover{
+.profilesubmit:hover{
 	background-color: rgb(247,244,184);
 	cursor: pointer;
 }
@@ -309,7 +313,7 @@ input[type=text], input[type=email], input[type=password]{
 	margin: 10px auto;
 	padding: 0;
 	border: 1px solid black;
-	width: 400px;
+	width: 80%;
 	background: white;
 	text-align: center;
 }
@@ -318,15 +322,11 @@ input[type=text], input[type=email], input[type=password]{
 	text-align: center;
 }
 
-#household{
-	margin: 0 100px 0 0;
-	float: right;
-}
 #householddiv {
-	margin: 0 auto;
+	margin: 10px auto;
 	padding: 0;
 	border: 1px solid black;
-	width: 300px;
+	width: 80%;
 	background: white;
 	text-align: center;
 }
@@ -347,7 +347,7 @@ input[type=text], input[type=email], input[type=password]{
 #chorestable{
 	margin: 10px auto;
 	background: white;
-	width: 400px;
+	width: 80%;
 	border-collapse: collapse;
 }
 
@@ -356,42 +356,39 @@ input[type=text], input[type=email], input[type=password]{
 }
 
 #addchorediv{
-	float: left;
-	margin: 0 0 0 100px;
-	padding: 0;
+	margin: 10px auto;
 	text-align: center;
 	border: 1px solid black;
-	width: 360px;
+	width: 80%;
 	background: white;
 }
 
 #addeventdiv{
-	float: left;
-	margin: 0 0 0 100px;
-	padding: 0;
+	margin: 10px auto;
 	text-align: center;
 	border: 1px solid black;
-	width: 360px;
+	width: 80%;
 	background: white;
 }
 
-#chores{
-	margin: 0 0 0 100px;
-}
-
 #editchorediv{
-	margin: 0 auto;
+	margin: 10px auto;
 	padding: 0;
 	clear: both;
 	text-align: center;
 	border-style: solid;
 	border-color: black;
 	border-width: 1px;
-	width: 500px;
+	width: 80%;
 	background: white;
 
 }
 
+.wrapper {
+	float: left;
+	width: 29.33%;
+	margin: 0 0 0 3%;
+}
 
 .grouplisttable{
 	margin: 10px auto;
@@ -476,4 +473,5 @@ table {
     width:100%;
     height:60px;   /* Height of the footer */
     text-align: center;
+	clear: both;
 }
