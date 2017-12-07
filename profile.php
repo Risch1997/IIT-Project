@@ -3,6 +3,8 @@
 	if (isset($_GET['userID']) && isset($_GET['groupID'])){
 		$userID = $_GET['userID'];
 		$groupID = $_GET['groupID'];
+		
+		echo "<a href=\"group.php?id=$groupID\"><< Back to group page</a>";
 
 
 		// load user name
