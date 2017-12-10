@@ -3,7 +3,7 @@
 	<div id="create">
 		<h1>Registration</h1>
 		<form name="registration" action="" method="POST">
-			<table id="registration">
+			<table id="registrationTable">
 				<tr>
 					<td><input type="text" name="firstName" placeholder="First Name"></td>
 				</tr>
